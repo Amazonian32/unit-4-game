@@ -21,8 +21,13 @@ $(document).ready(function () {
 
     $("button").on("click", function () {
         console.log("clicked: " + $(this).attr("id") + " " + $(this).attr("value"));
-
-
+        
+        let buttonVal = $(this).attr("value")
+        buttonVal = parseInt(buttonVal);
+        console.log(buttonVal);
+        score += buttonVal;
+        console.log(score);
+        $("#score").text(score);
 
     })
 
