@@ -1,4 +1,10 @@
 $(document).ready(function () {
+    var score = 0
+    var wins = 0
+    var losses = 0
+    $("#wins").text("Wins: " + wins);
+    $("#losses").text("Losses: " + losses);
+    $("#score").text(score);
     var randomNumber = Math.floor((Math.random() * 120) + 19);
     $("#random-number").text(randomNumber);
 
@@ -11,8 +17,13 @@ $(document).ready(function () {
     $("#ruby").val(ruby);
     $("#topaz").val(topaz);
     console.log(randomNumber, diamond, emerald, ruby, topaz);
+
+
     $("button").on("click", function () {
         console.log("clicked: " + $(this).attr("id") + " " + $(this).attr("value"));
+
+
+
     })
 
 

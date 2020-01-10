@@ -11,7 +11,7 @@ body {
     width: 650px;
     text-align: center;
 }
-h5, h1, #random-number, #tally, button, #score {
+h5, h1, #random-number,  button, #score, #wins, #losses, #total {
     background-color: #c3eef7;
     border-radius: 25px;
     padding: 10px;
@@ -19,6 +19,6 @@ h5, h1, #random-number, #tally, button, #score {
     box-shadow: grey 2px 2px;
 }
 
-#random-number, #tally, #score {
+#random-number, #tally, #score, #wins, #losses, #total {
     height: 50px;
 }
