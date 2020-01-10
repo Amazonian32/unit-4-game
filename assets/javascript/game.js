@@ -1,3 +1,5 @@
 $(document).ready(function(){
-    $("button").click()
+    $("button").on("click", function() {
+        console.log("clicked: " + $(this).attr("id"));
+    })
 })
