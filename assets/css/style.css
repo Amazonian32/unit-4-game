@@ -11,17 +11,14 @@ body {
     width: 650px;
     text-align: center;
 }
-h5, h1 {
+h5, h1, #random-number, #tally, button, #score {
     background-color: #c3eef7;
     border-radius: 25px;
     padding: 10px;
-    margin: 5px;
+    margin: 10px;
     box-shadow: grey 2px 2px;
 }
-#random-number, #tally, button {
-    background-color: #c3eef7;
-    border-radius: 25px;
-    padding: 10px;
-    margin: 20px;
-    box-shadow: grey 2px 2px;
+
+#random-number, #tally, #score {
+    height: 60px;
 }
