@@ -6,10 +6,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Crystal Collector</title>
+    <link rel='icon' href='assets/images/icons8-diamond-48.png' type='image/x-icon' >
     <link rel="stylesheet" href="assets/css/reset.css">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css"
         integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
     <link rel="stylesheet" href="assets/css/style.css">
+    <link href="https://fonts.googleapis.com/css?family=Baloo+Bhai&display=swap" rel="stylesheet">
+
     <script src="assets/javascript/game.js"></script>
 </head>
 
@@ -52,9 +55,9 @@
             </div>
         </div>
         <div class="row justify-space-between">
-            <div class="col-sm-4 card" id="random-number">
+            <div class="col-sm" id="random-number">
             </div>
-            <div class="col-sm-4 card">
+            <div class="col-sm" id="tally">
                 <div class="row">
                     <div id="wins"></div>
                 </div>
@@ -65,20 +68,20 @@
         </div>
         <div class="row">
             <div class="col-sm-2">
-                <button></button>
+                <button id="diamond" type="button"><img src="assets/images/icons8-diamond-48.png" alt=""></button>
             </div>
             <div class="col-sm-2">
-                <button></button>
+                <button id="emerald" type="button"><img src="assets/images/icons8-emerald-48.png" alt=""></button>
             </div>
             <div class="col-sm-2">
-                <button></button>
+                <button id="ruby" type="button"><img src="assets/images/icons8-ruby-48.png" alt=""></button>
             </div>
             <div class="col-sm-2">
-                <button></button>
+                <button id="topaz" type="button"><img src="assets/images/icons8-topaz-48.png" alt=""></button>
             </div>
         </div>
         <div class="row">
-            <div class="col-sm">
+            <div class="col-sm-5" id="total">
                 <h5>Your total score is:</h5>
             </div>
         </div>

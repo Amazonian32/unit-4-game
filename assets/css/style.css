@@ -1,0 +1,27 @@
+body {
+    background-image: url(http://cdn.lowgif.com/small/066098dd14895003-top-kawaii-pink-pastel-text-wallpapers.gif);
+    font-family: 'Baloo Bhai', cursive;
+    text-shadow:
+		-1px -1px 0 white,
+		1px -1px 0 white,
+		-1px 1px 0 white,
+        1px 1px 0 white;
+}
+.container {
+    width: 650px;
+    text-align: center;
+}
+h5, h1 {
+    background-color: #c3eef7;
+    border-radius: 25px;
+    padding: 10px;
+    margin: 5px;
+    box-shadow: grey 2px 2px;
+}
+#random-number, #tally, button {
+    background-color: #c3eef7;
+    border-radius: 25px;
+    padding: 10px;
+    margin: 20px;
+    box-shadow: grey 2px 2px;
+}
