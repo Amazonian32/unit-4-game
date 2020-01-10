@@ -1,4 +1,5 @@
-$(document).ready(function () {
+$(document).ready(function playGame () {
+    $("#restart").empty
     var score = 0
     var wins = 0
     var losses = 0
@@ -18,8 +19,16 @@ $(document).ready(function () {
     $("#topaz").val(topaz);
     console.log(randomNumber, diamond, emerald, ruby, topaz);
 
+    function restart() {
+       let restart =  $("<button>").attr("id", "restart").text("Play Again?");
+        $("body").append(restart);
+        $(restart).on("click", function () {
+            return playGame();
+        })
+    }
 
-    $("button").on("click", function () {
+
+    $(".button").on("click", function () {
         console.log("clicked: " + $(this).attr("id") + " " + $(this).attr("value"));
         
         let buttonVal = $(this).attr("value")
@@ -28,6 +37,16 @@ $(document).ready(function () {
         score += buttonVal;
         console.log(score);
         $("#score").text(score);
+
+        if (score == randomNumber) {
+            console.log("Winner")
+            wins++
+            return restart();
+        }else if (score > randomNumber) {
+            console.log("Loser")
+            losses++;
+            return restart();
+        }
 
     })
 
