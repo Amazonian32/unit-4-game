@@ -4,7 +4,7 @@ var losses = 0
 
 
 $(document).ready(function playGame() {
-    $("#restart").remove();
+    $(".restart").remove();
     var score = 0
     $("#wins").text("Wins: " + wins);
     $("#losses").text("Losses: " + losses);
@@ -21,17 +21,29 @@ $(document).ready(function playGame() {
     $("#ruby").val(ruby);
     $("#topaz").val(topaz);
     console.log(randomNumber, diamond, emerald, ruby, topaz);
+    var collect = function checkScore() {
+        if (score == randomNumber) {
+            console.log("Winner")
+            wins++
+            restart();
+        } else if (score > randomNumber) {
+            console.log("Loser")
+            losses++;
+            restart();
+        }
+    }
+
 
     function restart() {
-        let restart = $("<button>").attr("id", "restart").text("Play Again?");
-        $("body").append(restart);
+        let restart = $("<button>").addClass("restart").text("Play Again?");
+        $("#restart").prepend(restart);
         $(restart).on("click", function () {
             return playGame();
         })
     };
 
 
-    $(".button").on("click", function(event) {
+    $(".button").on("click", function (event) {
         console.log("clicked: " + $(this).attr("id") + " " + $(this).attr("value"));
         // event.preventDefault();
         let buttonVal = $(this).attr("value")
@@ -40,17 +52,10 @@ $(document).ready(function playGame() {
         score += buttonVal;
         console.log(score);
         $("#score").text(score);
-
-        if (score == randomNumber) {
-            console.log("Winner")
-            wins++
-            return playGame();
-        } else if (score > randomNumber) {
-            console.log("Loser")
-            losses++;
-            return restart();
-        }
-
+        collect();
     })
     
+
+
+
 })
