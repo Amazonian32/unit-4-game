@@ -20,18 +20,8 @@ $(document).ready(function playGame() {
     $("#emerald").val(emerald);
     $("#ruby").val(ruby);
     $("#topaz").val(topaz);
-    console.log(randomNumber, diamond, emerald, ruby, topaz);
-    var collect = function checkScore() {
-        if (score == randomNumber) {
-            console.log("Winner")
-            wins++
-            restart();
-        } else if (score > randomNumber) {
-            console.log("Loser")
-            losses++;
-            restart();
-        }
-    }
+    console.log(randomNumber, diamond, emerald, ruby, topaz, score);
+
 
 
     function restart() {
@@ -43,18 +33,31 @@ $(document).ready(function playGame() {
     };
 
 
-    $(".button").on("click", function (event) {
+    $(".button").on("click", function () {
         console.log("clicked: " + $(this).attr("id") + " " + $(this).attr("value"));
-        // event.preventDefault();
+
         let buttonVal = $(this).attr("value")
         buttonVal = parseInt(buttonVal);
         console.log(buttonVal);
         score += buttonVal;
         console.log(score);
         $("#score").text(score);
-        collect();
+
+        function checkScore() {
+            if (score === randomNumber) {
+                console.log("Winner")
+                wins++
+                restart();
+            } else if (score >= randomNumber) {
+                console.log("Loser")
+                losses++;
+                restart();
+            } 
+        }
+
+        checkScore();
     })
-    
+
 
 
 
